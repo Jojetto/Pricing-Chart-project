@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Chart</title>
+</head>
+<body>
+    <div class="details">
+        <div class="recentOrders">
+            <div class="cardHead">
+                <h2>Recent Orders</h2>
+            <table>
+                <thead>
+                    <td>Price Percentage</td>
+                        <td>Price Chart</td>
+                        <td>Payment</td>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><div id="number-view">80%</div></td>
+                        <td><div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36" id="daily"></circle>
+                            </svg>
+                        </div></td>
+                        <td><span class="status-pend">Pending</span></td>
+                    </tr>
+                    <tr>
+                        <td><div id="number-earn">40%</div></td>
+                        <div><td class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36" id="earning"></circle>
+                            </svg></td></div>
+                        </div>
+                        <td><span class="status-return">Return</span></td>
+                    </tr>
+                    <tr>
+                        <td><div id="number-like">65%</div></td>
+                        <td><div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36" id="like"></circle>
+                            </svg=></div></td>
+                        <td><span class="status-prog">In Progress</span></td>
+                    </tr>
+                    <tr>
+                        <td><div id="number-like">65%</div></td>
+                        <td><div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36" id="like"></circle>
+                            </svg></div></td>
+                        <td><span class="status-prog">In Progress</span></td>
+                    </tr>
+            </table>
+            <a href="#" class="button1">View All</a>
+        </div>
+    <script>
+        let view= document.getElementById('number-view');
+        let sale=document.getElementById('number-sale');
+        let comment=document.getElementById('number-com');
+        let like=document.getElementById('number-like');
+        let earn=document.getElementById('number-earn');
+        let counterv= 0;
+        let counters= 0;
+        let counter1= 0;
+        let counter= 0;
+        let countere= 0;
+        setInterval(() =>{
+            if(counterv==80){clearInterval();}
+            else{counterv +=1;
+            view.innerHTML = counterv+"%";
+            }
+        }, 5);
+        setInterval(() =>{
+            if(counters==50){clearInterval();}
+            else{counters +=1;
+            sale.innerHTML = counters+"%";
+            }
+        }, 15);
+                    setInterval(() =>{
+            if(countere==40){clearInterval();}
+            else{countere +=1;
+            earn.innerHTML = countere+"%";
+            }
+        }, 17);
+        setInterval(() =>{
+            if(counter==65){clearInterval();}
+            else{counter +=1;
+            like.innerHTML = counter+"%";
+            }
+        }, 16);
+        
+        setInterval(() =>{
+            if(counter1==97){clearInterval();}
+            else{counter1 +=1;
+            comment.innerHTML = counter1+"%";
+            }
+        }, 1.5);
+    </script>
+
+</body>
+</html>

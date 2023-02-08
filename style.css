@@ -1,0 +1,230 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+.details .recentOrders .card
+{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 16px;
+    margin:5px;
+    padding: 35px;
+}
+.details .recentOrders .card:hover
+{
+    box-shadow: none;
+    transition:all 200ms ease;
+}
+.details .recentOrders .numbers
+{
+    position: relative;
+    font-size: 2.5em;
+    font-weight: 500;
+}
+.details .recentOrders .cardName
+{
+color: #999;
+}
+.details .recentOrders svg
+{
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    width:7rem;
+    height:7rem;
+}
+.details .recentOrders svg circle
+{
+    fill: none;
+    stroke:#03a9f4;
+    stroke-width: 12px;
+    stroke-linecap: round;
+    transform: translate(5px,5px);
+    stroke-dasharray: 110;
+    stroke-dashoffset: 92;
+    animation: anim 2s forwards;
+}
+@keyframes anim{
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+.details .recentOrders svg #daily 
+{
+    stroke-dasharray: 180;
+    stroke-dashoffset: -20;
+}
+.details .recentOrders svg #sales 
+{
+    stroke-dasharray: 100;
+    stroke-dashoffset: 50;
+}
+
+.details .recentOrders svg #like 
+{
+    stroke-dasharray: 100;
+}
+
+
+.details .recentOrders svg #comment 
+{
+        stroke-dasharray: 210;
+        stroke-dashoffset: 70;
+}
+
+.details .recentOrders svg #earning 
+{
+    stroke-dasharray: 0 0 -10 ;
+}
+.details .recentOrders .cardHead h2
+{
+padding-left:20px;
+margin-bottom: 1.2rem;
+}
+.details .recentOrders .cardHead table
+{
+    background-color: #fff;
+    width: 100%;
+    border-radius: 24px;
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.4);
+    padding:35px;
+    transition: all 200ms ease;
+    margin-bottom: 10px;
+}
+.details .recentOrders .cardHead table:hover
+{
+    box-shadow: none;
+}
+.details .recentOrders .cardHead table thead
+{
+    font-weight: 700;
+}
+.details .recentOrders .cardHead table tbody td
+{
+height:3.2rem;
+border-bottom: 1.5px solid rgba(132, 139, 200, 0.18);
+color: rgb(83, 83, 85);
+}
+.details .recentOrders .cardHead table tbody tr:hover
+{
+    cursor: pointer;
+    background-color: rgba(132, 139, 200, 0.18);
+}
+.details .recentOrders .cardHead table tbody td .status-prog
+{
+    color: green;
+}
+.details .recentOrders .cardHead table tbody td .status-return
+{
+    color: darkred;
+}
+.details .recentOrders .cardHead table tbody td .status-pend
+{
+    color: darkgoldenrod;
+}
+.details .recentOrders .cardHead .button1
+{
+    color: #03a9f4;
+    font-weight: 700;
+    font-size: 1.5em;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin: 1.5rem;
+}
+@media screen and (max-width:992px) {
+    .details .recentOrders
+    {
+        width: 700px;
+        flex-wrap: wrap;
+    }
+    .details .recentOrders .card
+    {   
+    padding: 10px;
+    }
+}
+    
+    /* Medium devices (landscape tablets, 768px and up) */
+    
+    @media screen and (max-width:768px) 
+    {
+        .container1 .nav
+    {
+        width: 50px;
+    }
+    .details .recentOrders
+    {
+        width:600px;
+        flex-wrap: wrap;
+    }
+    .main .details .recentOrders .recentCustomers
+    {
+    width:320px;
+    }
+    .main .details .recentOrders .Analytics
+    {
+        padding-left: 15px;
+    }
+    .main .details .recentOrders .Analytics .btn
+    {
+        width: 80%;
+    }
+    .main .details .recentOrders .Analytics .items
+    {
+        padding: 8px;
+    }
+    }
+    
+    /* Extra small devices (phones, 600px and down) */
+    
+    @media only screen and (max-width: 600px) 
+    {
+    .container
+    {
+        position: relative;
+        display: flex;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+    .details .recentOrders{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: 0;
+    }
+    .details .recentOrders .card
+    {
+        padding: 0;
+        max-height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .details .recentOrders .card .iconBox
+    {
+        width:10px;
+    }
+        .main .details .recentOrders .recentCustomers
+        {
+            padding-left: 2px;
+        width:170px;
+        }
+        .main .details .recentOrders .Analytics
+        {
+            padding-left: 5px;
+        }
+        .main .details .recentOrders table
+        {
+    width: 550px;
+        }
+        .main .details .recentOrders .Analytics .btn
+        {
+            width: 60%;
+        }
+        .main .details .recentOrders .Analytics .items
+        {
+            padding: 4px;
+        }   
+    }
